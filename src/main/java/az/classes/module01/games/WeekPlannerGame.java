@@ -9,11 +9,11 @@ public class WeekPlannerGame {
     private static final String[] weekTasks = new String[DAYS_IN_WEEK];
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         for (int i = 0; i < DAYS_IN_WEEK; i++) {
             System.out.println("Enter your task for " + daysOfWeek[i] + ": ");
-            weekTasks[i] = scanner.nextLine();
+            weekTasks[i] = scan.nextLine();
         }
 
         System.out.println("\nYour Week Planner:");
@@ -23,7 +23,7 @@ public class WeekPlannerGame {
 
         while (true) {
             System.out.println("\nEnter the day to view your task (or type 'exit' to quit): ");
-            String input = scanner.nextLine().trim().toLowerCase();
+            String input = scan.nextLine().trim().toLowerCase();
 
             if (input.equals("exit")) {
                 System.out.println("Exiting the week planner.");
@@ -43,7 +43,7 @@ public class WeekPlannerGame {
                 System.out.println("Invalid day. Please enter a valid day of the week.");
             }
         }
-        scanner.close();
+        scan.close();
     }
 
 }
